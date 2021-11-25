@@ -12,7 +12,7 @@ function solution(C, N, dogW) {
         if (sum > C) return
         if (L === N) {
           answer = Math.max(answer, sum)
-        }else {
+        } else {
           DFS(L+1, sum + dogW[L])
           DFS(L+1, sum)
         }
