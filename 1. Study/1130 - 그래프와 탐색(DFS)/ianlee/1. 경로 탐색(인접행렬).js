@@ -9,13 +9,13 @@ function solution(n, arr) {
     4: (6) [0, 0, 0, 0, 0, 0]
     5: (6) [0, 0, 0, 0, 0, 0]
   */
-  let ch = Array.from({length: n + 1}, () => 0); // check 배열
+  let ch = Array.from({ length: n + 1 }, () => 0); // check 배열
   // console.log(ch)
   /*
     [0, 0, 0, 0, 0, 0]
   */
-  let path = [];
-  for (let [a, b] of arr) { // arr 값 1개 씩 탐색
+  for (let [a, b] of arr) {
+    // arr 값 1개 씩 탐색
     // console.log(a, b)
     /*
       1 2
@@ -28,7 +28,7 @@ function solution(n, arr) {
       4 2
       4 5
     */
-    graph[a][b] = 1 // 방향 그래프에서 graph arr 에 1로 체크
+    graph[a][b] = 1; // 방향 그래프에서 graph arr 에 1로 체크
   }
   //console.log(graph)
   /*           1  2  3  4  5
@@ -41,7 +41,8 @@ function solution(n, arr) {
   */
 
   function DFS(v) {
-    if(v === n) { // n 마지막 노드 도착시 answer++
+    if (v === n) {
+      // n 마지막 노드 도착시 answer++
       answer++;
       // console.log(path);
       /*
@@ -52,10 +53,10 @@ function solution(n, arr) {
         [1, 4, 2, 5]
         [1, 4, 5]
       */
-    } 
-    else {
-      for(let i = 1; i <= n; i++) {
-        if(graph[v][i] === 1 && ch[i] === 0) { // 1이면 갈수있고, ch가 0이면 간적이 없음
+    } else {
+      for (let i = 1; i <= n; i++) {
+        if (graph[v][i] === 1 && ch[i] === 0) {
+          // 1이면 갈수있고, ch가 0이면 간적이 없음
           ch[i] = 1; // 지나갔으면 1로
           DFS(i); // 다음 번호 for loop
           ch[i] = 0; // back전에 다시 0 초기화
@@ -77,6 +78,6 @@ let arr = [
   [2, 5],
   [3, 4],
   [4, 2],
-  [4, 5]
+  [4, 5],
 ];
 console.log(solution(5, arr));

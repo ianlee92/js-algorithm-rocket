@@ -9,13 +9,13 @@ function solution(n, arr) {
     4: []
     5: []
   */
-  let ch = Array.from({length: n + 1}, () => 0);
+  let ch = Array.from({ length: n + 1 }, () => 0);
   /*
     [0, 0, 0, 0, 0, 0]
   */
 
-  for(let [a, b] of arr) {
-    graph[a].push(b) // 인접 리스트
+  for (let [a, b] of arr) {
+    graph[a].push(b); // 인접 리스트
   }
   // console.log(graph)
   /*
@@ -28,8 +28,8 @@ function solution(n, arr) {
   */
   function DFS(v) {
     if (v === n) {
-      answer ++;
-       /*
+      answer++;
+      /*
         [1, 2, 3, 4, 5]
         [1, 2, 5]
         [1, 3, 4, 2, 5]
@@ -37,12 +37,13 @@ function solution(n, arr) {
         [1, 4, 2, 5]
         [1, 4, 5]
       */
-    }
-    else {
-      for(let i = 0; i <= graph[v].length; i++) { // 그래프 행의 길이만큼 for loop
-        if(ch[graph[v][i]] === 0) {
+    } else {
+      for (let i = 0; i <= graph[v].length; i++) {
+        // 그래프 행의 길이만큼 for loop
+        if (ch[graph[v][i]] === 0) {
+          // 체크 유무 따짐
           ch[graph[v][i]] = 1;
-          DFS(graph[v][i]);
+          DFS(graph[v][i]); // graph[v][i]는 정점
           ch[graph[v][i]] = 0;
         }
       }
@@ -62,6 +63,6 @@ let arr = [
   [2, 5],
   [3, 4],
   [4, 2],
-  [4, 5]
+  [4, 5],
 ];
 console.log(solution(5, arr));
