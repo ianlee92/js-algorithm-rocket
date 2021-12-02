@@ -4,7 +4,7 @@
 만약 총 4계단을 오른다면 그 방법의 수는 1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2 로 5가지이다.  
 그렇다면 총 N계단일 때 철수가 올라갈 수 있는 방법의 수는 몇 가지인가?
 
-(이미지)
+![https://blog.kakaocdn.net/dn/bpeXKq/btrmRjRsnfw/Ik5K5Nj3fW4j1PyAd4kHCk/img.png](https://blog.kakaocdn.net/dn/bpeXKq/btrmRjRsnfw/Ik5K5Nj3fW4j1PyAd4kHCk/img.png)
 
 > 입력설명
 
@@ -30,7 +30,7 @@
 철수는 돌 다리를 건널 때 한 번에 한 칸 또는 두 칸씩 건너뛰면서 돌다리를 건널 수 있습니다.  
 철수가 개울을 건너는 방법은 몇 가지일까요?
 
-(이미지)
+![https://blog.kakaocdn.net/dn/O4p9d/btrmTQASfhL/1lTiRnKvOKu86KoJHPr8IK/img.png](https://blog.kakaocdn.net/dn/O4p9d/btrmTQASfhL/1lTiRnKvOKu86KoJHPr8IK/img.png)
 
 > 입력설명
 
