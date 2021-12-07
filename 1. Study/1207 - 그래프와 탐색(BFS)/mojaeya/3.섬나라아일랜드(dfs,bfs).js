@@ -30,7 +30,8 @@ function solution(n, arr){
       for(let i=0; i<8; i++){ // queue 에서 꺼낸 좌표로부터 8방향 탐색 시작
         let nx = x + dx[i];
         let ny = y + dy[i];
-        if(nx<0 || ny<0 || nx>=n || ny>=n && arr[nx][ny] === 1) {
+        if(nx<0 || ny<0 || nx>=n || ny>=n) continue;
+        if(arr[nx][ny] === 1){
           arr[nx][ny] = 0;
           queue.push([nx, ny])
         }
